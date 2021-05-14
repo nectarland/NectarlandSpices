@@ -22,12 +22,40 @@
 <article{{ attributes.addClass('commerce-product-full') }}>
   <div class="row">
     <div class="product-left col-sm-6">
+
+
       {{ product.field_images }}
+
+
+
+{#     
+
+      {{ product|without('field_images') }}
+
+      {% set field_image = product|without('variation_attributes', 'field_images')|render %}
+      {% if field_image %}
+        <div class="field-image-wrapper">{{ field_image.field_images }}</div>
+      {% endif %}
+
+      {% if content.field_image|render is not empty %}
+        <div class="field-image-wrapper">{{ product.field_images }}</div>
+      {% endif %}
+
+      <ol>
+          {% for key, value in _context  %}
+            <li>{{ key }} </li>
+          {% endfor %}
+      </ol>
+
+#}
+
+
     </div>
     <div class="product-right col-sm-6">
       {{ product|without('variation_attributes', 'field_images', 'field_reviews', 'field_related_products') }}
     </div>
 
+{#
     <div class="product-bottom col-sm-12">
       <ul class="nav nav-tabs">
         <li class="active">
@@ -77,6 +105,9 @@
         {% endif %}
       </div>
     </div>
+    #}
+
+
 
     {% if product.field_related_products|render != '' %}
       <div class="related-products col-sm-12">

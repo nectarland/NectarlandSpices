@@ -12,7 +12,7 @@ use Drupal\datetime\Plugin\Field\FieldWidget\DateTimeDefaultWidget;
  * Plugin implementation of the 'commerce_end_date' widget.
  *
  * @deprecated in commerce:8.x-2.16 and is removed from commerce:3.x.
- *   Use the the 'commerce_store_datetime' widget instead.
+ *   Use the 'commerce_store_datetime' widget instead.
  *
  * @FieldWidget(
  *   id = "commerce_end_date",
@@ -39,7 +39,6 @@ class EndDateWidget extends DateTimeDefaultWidget {
     $element['value']['#description'] = '';
     // Workaround for #2419131.
     $field_name = $this->fieldDefinition->getName();
-    $element['container']['#type'] = 'container';
     $element['container'] = [
       '#type' => 'container',
       '#states' => [

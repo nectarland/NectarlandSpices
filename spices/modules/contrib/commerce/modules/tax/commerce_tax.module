@@ -13,6 +13,17 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\field\FieldStorageConfigInterface;
 
 /**
+ * Implements hook_theme().
+ */
+function commerce_tax_theme($existing, $type, $theme, $path) {
+  return [
+    'commerce_tax_resources' => [
+      'variables' => [],
+    ],
+  ];
+}
+
+/**
  * Implements hook_entity_base_field_info().
  */
 function commerce_tax_entity_base_field_info(EntityTypeInterface $entity_type) {
@@ -43,19 +54,6 @@ function commerce_tax_entity_base_field_info(EntityTypeInterface $entity_type) {
       ->setDisplayConfigurable('form', TRUE);
 
     return $fields;
-  }
-}
-
-/**
- * Implements hook_commerce_inline_form_PLUGIN_ID_alter().
- */
-function commerce_tax_commerce_inline_form_customer_profile_alter(array &$inline_form, FormStateInterface $form_state, array &$complete_form) {
-  /** @var \Drupal\commerce\Plugin\Commerce\InlineForm\EntityInlineFormInterface $plugin */
-  $plugin = $inline_form['#inline_form'];
-  $profile_type = $plugin->getEntity()->bundle();
-  if ($profile_type == 'customer' && $inline_form['#profile_scope'] != 'billing') {
-    // Hide the tax_number field when it's not used in a billing context.
-    $inline_form['tax_number']['#access'] = FALSE;
   }
 }
 

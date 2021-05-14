@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0b97caf6a9c12d42ae4c581f93925ce5",
+    "content-hash": "6ef7567d391c22111b0b6493cb3b7614",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1282,6 +1282,114 @@
             }
         },
         {
+            "name": "drupal/commerce_cart_api",
+            "version": "1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/commerce_cart_api.git",
+                "reference": "8.x-1.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/commerce_cart_api-8.x-1.4.zip",
+                "reference": "8.x-1.4",
+                "shasum": "59dc0e713ac3a946b940707a93726b52e1f59e62"
+            },
+            "require": {
+                "drupal/commerce": "^2.13",
+                "drupal/commerce_cart": "*",
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.4",
+                    "datestamp": "1560966488",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "mglaman",
+                    "homepage": "https://www.drupal.org/user/2416470"
+                }
+            ],
+            "description": "Provides a RESTful interface to interact with carts in Drupal Commerce via a lightweight public API.",
+            "homepage": "https://www.drupal.org/project/commerce_cart_api",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/commerce_cart_api",
+                "issues": "https://www.drupal.org/project/issues/commerce_cart_api"
+            }
+        },
+        {
+            "name": "drupal/commerce_cart_flyout",
+            "version": "1.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/commerce_cart_flyout.git",
+                "reference": "8.x-1.7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/commerce_cart_flyout-8.x-1.7.zip",
+                "reference": "8.x-1.7",
+                "shasum": "4da6705cad094a7475ae0d14c070ccc28b6d65e0"
+            },
+            "require": {
+                "drupal/commerce": "^2.0",
+                "drupal/commerce_cart": "*",
+                "drupal/commerce_cart_api": "^1.0",
+                "drupal/commerce_product": "*",
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.7",
+                    "datestamp": "1555562286",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "mglaman",
+                    "homepage": "https://www.drupal.org/user/2416470"
+                }
+            ],
+            "description": "WIP",
+            "homepage": "https://www.drupal.org/project/commerce_cart_flyout",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/commerce_cart_flyout",
+                "issues": "https://www.drupal.org/project/issues/commerce_cart_flyout"
+            }
+        },
+        {
             "name": "drupal/commerce_number_pattern",
             "version": "2.16.0",
             "require": {
@@ -1384,6 +1492,119 @@
             "homepage": "https://www.drupal.org/project/commerce",
             "support": {
                 "source": "https://git.drupalcode.org/project/commerce"
+            }
+        },
+        {
+            "name": "drupal/commerce_payment",
+            "version": "2.16.0",
+            "require": {
+                "drupal/commerce": "self.version",
+                "drupal/commerce_order": "*",
+                "drupal/core": "*",
+                "drupal/entity_reference_revisions": "*"
+            },
+            "type": "metapackage",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.16",
+                    "datestamp": "1582923355",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "bojanz",
+                    "homepage": "https://www.drupal.org/user/86106"
+                },
+                {
+                    "name": "jsacksick",
+                    "homepage": "https://www.drupal.org/user/972218"
+                },
+                {
+                    "name": "mglaman",
+                    "homepage": "https://www.drupal.org/user/2416470"
+                },
+                {
+                    "name": "rszrama",
+                    "homepage": "https://www.drupal.org/user/49344"
+                }
+            ],
+            "description": "Provides payment functionality.",
+            "homepage": "https://www.drupal.org/project/commerce",
+            "support": {
+                "source": "https://git.drupalcode.org/project/commerce"
+            }
+        },
+        {
+            "name": "drupal/commerce_paypal",
+            "version": "1.0.0-beta6",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/commerce_paypal.git",
+                "reference": "8.x-1.0-beta6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/commerce_paypal-8.x-1.0-beta6.zip",
+                "reference": "8.x-1.0-beta6",
+                "shasum": "7d8b02514918aeb734d948001ea53aebd0852f92"
+            },
+            "require": {
+                "drupal/commerce": "^2.14",
+                "drupal/commerce_payment": "*",
+                "drupal/core": "~8.0",
+                "sainsburys/guzzle-oauth2-plugin": "^3.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-beta6",
+                    "datestamp": "1570114089",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "bojanz",
+                    "homepage": "https://www.drupal.org/user/86106"
+                },
+                {
+                    "name": "jsacksick",
+                    "homepage": "https://www.drupal.org/user/972218"
+                },
+                {
+                    "name": "mglaman",
+                    "homepage": "https://www.drupal.org/user/2416470"
+                },
+                {
+                    "name": "rszrama",
+                    "homepage": "https://www.drupal.org/user/49344"
+                }
+            ],
+            "description": "Provides Commerce integration for PayPal.",
+            "homepage": "http://drupal.org/project/commerce_paypal",
+            "support": {
+                "source": "https://git.drupalcode.org/project/commerce_paypal"
             }
         },
         {
@@ -3458,6 +3679,52 @@
             "time": "2019-08-13T17:33:27+00:00"
         },
         {
+            "name": "firebase/php-jwt",
+            "version": "v5.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/firebase/php-jwt.git",
+                "reference": "4566062c68f76f43d44f1643f4970fe89757d4c6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/firebase/php-jwt/zipball/4566062c68f76f43d44f1643f4970fe89757d4c6",
+                "reference": "4566062c68f76f43d44f1643f4970fe89757d4c6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8|^5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Firebase\\JWT\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Neuman Vong",
+                    "email": "neuman+pear@twilio.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Anant Narayanan",
+                    "email": "anant@php.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A simple library to encode and decode JSON Web Tokens (JWT) in PHP. Should conform to the current spec.",
+            "homepage": "https://github.com/firebase/php-jwt",
+            "time": "2020-02-24T23:15:03+00:00"
+        },
+        {
             "name": "guzzlehttp/guzzle",
             "version": "6.3.3",
             "source": {
@@ -4151,6 +4418,55 @@
             ],
             "description": "A polyfill for getallheaders.",
             "time": "2019-03-08T08:55:37+00:00"
+        },
+        {
+            "name": "sainsburys/guzzle-oauth2-plugin",
+            "version": "v3.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Sainsburys/guzzle-oauth2-plugin.git",
+                "reference": "485edd64870dd951f8fc6ec362296f11787194bf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Sainsburys/guzzle-oauth2-plugin/zipball/485edd64870dd951f8fc6ec362296f11787194bf",
+                "reference": "485edd64870dd951f8fc6ec362296f11787194bf",
+                "shasum": ""
+            },
+            "require": {
+                "firebase/php-jwt": "^3.0|^4.0|^5.0",
+                "guzzlehttp/guzzle": "^6.0",
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Sainsburys\\Guzzle\\Oauth2\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bojan Zivanovic"
+                },
+                {
+                    "name": "Damien Tournoud"
+                },
+                {
+                    "name": "Patrick Dawkins"
+                },
+                {
+                    "name": "Daniel Macedo"
+                }
+            ],
+            "description": "An OAuth2 middleware for Guzzle",
+            "time": "2017-11-07T13:08:06+00:00"
         },
         {
             "name": "stack/builder",

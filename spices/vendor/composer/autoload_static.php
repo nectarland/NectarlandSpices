@@ -62,6 +62,7 @@ class ComposerStaticInitf0a76219c246ec6fe5f87782734a67c8
             'Symfony\\Component\\ClassLoader\\' => 30,
             'Symfony\\Cmf\\Component\\Routing\\' => 30,
             'Symfony\\Bridge\\PsrHttpMessage\\' => 30,
+            'Sainsburys\\Guzzle\\Oauth2\\' => 25,
         ),
         'P' => 
         array (
@@ -78,6 +79,10 @@ class ComposerStaticInitf0a76219c246ec6fe5f87782734a67c8
             'GuzzleHttp\\Psr7\\' => 16,
             'GuzzleHttp\\Promise\\' => 19,
             'GuzzleHttp\\' => 11,
+        ),
+        'F' => 
+        array (
+            'Firebase\\JWT\\' => 13,
         ),
         'E' => 
         array (
@@ -219,6 +224,10 @@ class ComposerStaticInitf0a76219c246ec6fe5f87782734a67c8
         array (
             0 => __DIR__ . '/..' . '/symfony/psr-http-message-bridge',
         ),
+        'Sainsburys\\Guzzle\\Oauth2\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sainsburys/guzzle-oauth2-plugin/src',
+        ),
         'Psr\\Log\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
@@ -246,6 +255,10 @@ class ComposerStaticInitf0a76219c246ec6fe5f87782734a67c8
         'GuzzleHttp\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
+        ),
+        'Firebase\\JWT\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/firebase/php-jwt/src',
         ),
         'Egulias\\EmailValidator\\' => 
         array (

@@ -33,11 +33,18 @@ class OrderFixedAmountOff extends OrderPromotionOfferBase {
     if ($subtotal_price->getCurrencyCode() != $amount->getCurrencyCode()) {
       return;
     }
-    // The promotion amount can't be larger than the subtotal, to avoid
+    $total_price = $order->getTotalPrice();
+    // The promotion amount can't be larger than the total, to avoid
     // potentially having a negative order total.
-    if ($amount->greaterThan($subtotal_price)) {
-      $amount = $subtotal_price;
+    if ($total_price && $amount->greaterThan($total_price)) {
+      $amount = $total_price;
     }
+
+    // Skip applying the promotion if there's no amount to discount.
+    if ($amount->isZero()) {
+      return;
+    }
+
     // Split the amount between order items.
     $amounts = $this->splitter->split($order, $amount);
 
@@ -45,8 +52,7 @@ class OrderFixedAmountOff extends OrderPromotionOfferBase {
       if (isset($amounts[$order_item->id()])) {
         $order_item->addAdjustment(new Adjustment([
           'type' => 'promotion',
-          // @todo Change to label from UI when added in #2770731.
-          'label' => t('Discount'),
+          'label' => $promotion->getDisplayName() ?: $this->t('Discount'),
           'amount' => $amounts[$order_item->id()]->multiply('-1'),
           'source_id' => $promotion->id(),
         ]));

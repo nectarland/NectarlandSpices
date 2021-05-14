@@ -81,7 +81,7 @@ final class Adjustment {
     if (empty($types[$definition['type']])) {
       throw new \InvalidArgumentException(sprintf('%s is an invalid adjustment type.', $definition['type']));
     }
-    if (!empty($definition['percentage'])) {
+    if (isset($definition['percentage'])) {
       if (is_float($definition['percentage'])) {
         throw new \InvalidArgumentException(sprintf('The provided percentage "%s" must be a string, not a float.', $definition['percentage']));
       }
@@ -97,7 +97,7 @@ final class Adjustment {
     $this->type = $definition['type'];
     $this->label = (string) $definition['label'];
     $this->amount = $definition['amount'];
-    $this->percentage = !empty($definition['percentage']) ? $definition['percentage'] : NULL;
+    $this->percentage = isset($definition['percentage']) ? $definition['percentage'] : NULL;
     $this->sourceId = !empty($definition['source_id']) ? $definition['source_id'] : NULL;
     $this->included = !empty($definition['included']);
     $this->locked = !empty($definition['locked']);
@@ -175,10 +175,10 @@ final class Adjustment {
   }
 
   /**
-   * Gets whether the adjustment is included in the base price.
+   * Gets whether the adjustment is included in the price.
    *
    * @return bool
-   *   TRUE if the adjustment is included in the base price, FALSE otherwise.
+   *   TRUE if the adjustment is included in the price, FALSE otherwise.
    */
   public function isIncluded() : bool {
     return $this->included;

@@ -47,7 +47,7 @@ abstract class TaxTypeBase extends PluginBase implements TaxTypeInterface, Conta
    * The ID of the parent config entity.
    *
    * @deprecated in commerce:8.x-2.16 and is removed from commerce:3.x.
-   *   Use $this->>parentEntity->id() instead.
+   *   Use $this->parentEntity->id() instead.
    *
    * @var string
    */
@@ -162,7 +162,7 @@ abstract class TaxTypeBase extends PluginBase implements TaxTypeInterface, Conta
   public function buildConfigurationForm(array $form, FormStateInterface $form_state) {
     $form['display_inclusive'] = [
       '#type' => 'checkbox',
-      '#title' => t('Display taxes of this type inclusive in product prices.'),
+      '#title' => $this->t('Display taxes of this type inclusive in product prices.'),
       '#default_value' => $this->configuration['display_inclusive'],
     ];
 

@@ -21,12 +21,14 @@
       </div>
     {% endif %}
 
+
     {% if content.main %}
       <div {{ region_attributes.main.addClass('layout__region', 'layout__region--main') }}>
         {{ content.main }}
       </div>
     {% endif %}
 
+{#
     {% if content.services %}
       <div {{ region_attributes.services.addClass('layout__region', 'layout__region--services', 'row') }}>
         <div class="layout__region--services--inner container-fluid">
@@ -40,5 +42,7 @@
         {{ content.bottom }}
       </div>
     {% endif %}
+#}
+
   </div>
 {% endif %}
